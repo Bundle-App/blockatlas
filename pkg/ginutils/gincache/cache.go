@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/patrickmn/go-cache"
-	"github.com/trustwallet/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
 	"io/ioutil"
 	"net/http"
 	"time"

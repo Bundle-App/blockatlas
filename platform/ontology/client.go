@@ -2,7 +2,7 @@ package ontology
 
 import (
 	"fmt"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 )
 
 type Client struct {

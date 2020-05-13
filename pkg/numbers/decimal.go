@@ -1,7 +1,7 @@
 package numbers
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
 	"math/big"
 	"strings"
 	"unicode"

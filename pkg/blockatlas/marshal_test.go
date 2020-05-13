@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/trustwallet/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/coin"
 )
 
 var txJSON = []byte(`{

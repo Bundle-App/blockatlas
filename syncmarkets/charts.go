@@ -2,12 +2,12 @@ package syncmarkets
 
 import (
 	"github.com/spf13/viper"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/numbers"
-	"github.com/trustwallet/blockatlas/syncmarkets/chart"
-	"github.com/trustwallet/blockatlas/syncmarkets/chart/cmc"
-	"github.com/trustwallet/blockatlas/syncmarkets/chart/coingecko"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/numbers"
+	"github.com/Bundle-App/blockatlas/syncmarkets/chart"
+	"github.com/Bundle-App/blockatlas/syncmarkets/chart/cmc"
+	"github.com/Bundle-App/blockatlas/syncmarkets/chart/coingecko"
 	"math"
 	"sort"
 )

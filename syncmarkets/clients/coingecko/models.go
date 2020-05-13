@@ -1,7 +1,7 @@
 package coingecko
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"time"
 )
 

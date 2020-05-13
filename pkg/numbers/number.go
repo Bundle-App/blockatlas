@@ -2,7 +2,7 @@ package numbers
 
 import (
 	"github.com/shopspring/decimal"
-	"github.com/trustwallet/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
 	"math"
 	"math/big"
 	"strconv"

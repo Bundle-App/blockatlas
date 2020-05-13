@@ -3,10 +3,10 @@ package main
 import (
 	"flag"
 	"github.com/spf13/viper"
-	"github.com/trustwallet/blockatlas/config"
-	"github.com/trustwallet/blockatlas/pkg/logger"
-	"github.com/trustwallet/blockatlas/storage"
-	"github.com/trustwallet/blockatlas/syncmarkets"
+	"github.com/Bundle-App/blockatlas/config"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/storage"
+	"github.com/Bundle-App/blockatlas/syncmarkets"
 	"path/filepath"
 )
 

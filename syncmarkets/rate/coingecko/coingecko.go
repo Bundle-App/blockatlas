@@ -1,9 +1,9 @@
 package coingecko
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/syncmarkets/clients/coingecko"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/syncmarkets/clients/coingecko"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate"
 	"strings"
 )
 

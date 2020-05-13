@@ -3,14 +3,14 @@ package syncmarkets
 import (
 	"github.com/robfig/cron/v3"
 	"github.com/spf13/viper"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/logger"
-	"github.com/trustwallet/blockatlas/storage"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate/cmc"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate/coingecko"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate/compound"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate/fixer"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/storage"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate/cmc"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate/coingecko"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate/compound"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate/fixer"
 )
 
 var rateProviders rate.Providers

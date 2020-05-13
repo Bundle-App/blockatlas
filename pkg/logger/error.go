@@ -2,7 +2,7 @@ package logger
 
 import (
 	log "github.com/sirupsen/logrus"
-	"github.com/trustwallet/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
 )
 
 type errMessage struct {

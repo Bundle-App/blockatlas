@@ -1,9 +1,9 @@
 package cmc
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/syncmarkets/clients/cmc"
-	"github.com/trustwallet/blockatlas/syncmarkets/market"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/syncmarkets/clients/cmc"
+	"github.com/Bundle-App/blockatlas/syncmarkets/market"
 )
 
 const (

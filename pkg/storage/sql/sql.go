@@ -2,8 +2,8 @@ package sql
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/storage/util"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/storage/util"
 )
 
 type sql struct {

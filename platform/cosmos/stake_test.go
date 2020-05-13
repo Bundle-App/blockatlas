@@ -2,7 +2,7 @@ package cosmos
 
 import (
 	"encoding/json"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

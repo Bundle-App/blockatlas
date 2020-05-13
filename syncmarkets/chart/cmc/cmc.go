@@ -1,10 +1,10 @@
 package cmc
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/syncmarkets/chart"
-	"github.com/trustwallet/blockatlas/syncmarkets/clients/cmc"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/syncmarkets/chart"
+	"github.com/Bundle-App/blockatlas/syncmarkets/clients/cmc"
 	"time"
 )
 
