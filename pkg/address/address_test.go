@@ -4,6 +4,17 @@ import (
 	"testing"
 )
 
+func TestEIP55Checksum(t *testing.T) {
+
+	eip55CheckSumedAddress := EIP55Checksum("0xad5499c3b57b75ebdad0b58f8b31a6113b45ce84")
+
+	expected := "0xAD5499C3B57B75EBdad0B58F8B31a6113B45ce84"
+
+	if eip55CheckSumedAddress != expected {
+		t.Errorf("EIP55Checksum() Failed: expected: %v, got: %v", expected, eip55CheckSumedAddress)
+	}
+}
+
 func TestChecksum(t *testing.T) {
 	tests := []struct {
 		name          string
@@ -24,6 +35,7 @@ func TestChecksum(t *testing.T) {
 			}
 		})
 	}
+
 }
 
 func TestRemove0x(t *testing.T) {
