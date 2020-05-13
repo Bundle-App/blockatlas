@@ -3,8 +3,8 @@ package blockatlas
 import (
 	"encoding/json"
 	"github.com/spf13/cast"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/numbers"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/numbers"
 	"regexp"
 	"sort"
 	"strings"

@@ -3,7 +3,7 @@ package tezos
 import (
 	"encoding/json"
 	"github.com/stretchr/testify/assert"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"testing"
 )
 

@@ -2,8 +2,8 @@ package redis
 
 import (
 	"encoding/json"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/storage/util"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/storage/util"
 )
 
 func (db *Redis) GetAllHM(entity string) (map[string]string, error) {

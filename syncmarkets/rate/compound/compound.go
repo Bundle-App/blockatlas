@@ -1,9 +1,9 @@
 package compound
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	c "github.com/trustwallet/blockatlas/syncmarkets/clients/compound"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	c "github.com/Bundle-App/blockatlas/syncmarkets/clients/compound"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate"
 	"strings"
 	"time"
 )

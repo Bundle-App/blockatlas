@@ -8,12 +8,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/spf13/viper"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/ginutils"
-	"github.com/trustwallet/blockatlas/pkg/ginutils/gincache"
-	"github.com/trustwallet/blockatlas/pkg/logger"
-	"github.com/trustwallet/blockatlas/pkg/metrics"
-	services "github.com/trustwallet/blockatlas/services/assets"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/ginutils"
+	"github.com/Bundle-App/blockatlas/pkg/ginutils/gincache"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/pkg/metrics"
+	services "github.com/Bundle-App/blockatlas/services/assets"
 )
 
 // @Summary Get Transactions

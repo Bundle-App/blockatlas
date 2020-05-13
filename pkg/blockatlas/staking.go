@@ -1,6 +1,6 @@
 package blockatlas
 
-import "github.com/trustwallet/blockatlas/coin"
+import "github.com/Bundle-App/blockatlas/coin"
 
 type ValidatorPage []Validator
 type DelegationsPage []Delegation

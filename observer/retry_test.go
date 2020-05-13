@@ -2,7 +2,7 @@ package observer
 
 import (
 	"errors"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"testing"
 	"time"
 )

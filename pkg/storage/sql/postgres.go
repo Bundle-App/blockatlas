@@ -3,7 +3,7 @@ package sql
 import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
-	"github.com/trustwallet/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
 	"time"
 )
 

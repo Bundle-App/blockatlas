@@ -2,9 +2,9 @@ package cosmos
 
 import (
 	"fmt"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
 	"net/url"
 	"strconv"
 )

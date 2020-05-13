@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/Pantani/httpexpect"
-	"github.com/trustwallet/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
 	"net/http"
 	"sync"
 	"testing"

@@ -1,9 +1,9 @@
 package market
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/logger"
-	"github.com/trustwallet/blockatlas/storage"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/storage"
 )
 
 const (

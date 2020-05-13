@@ -5,8 +5,8 @@ package functional
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/trustwallet/blockatlas/coin"
-	"github.com/trustwallet/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
 	"io/ioutil"
 	"path/filepath"
 	"strings"

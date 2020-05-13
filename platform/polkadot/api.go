@@ -4,12 +4,12 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/trustwallet/blockatlas/pkg/numbers"
+	"github.com/Bundle-App/blockatlas/pkg/numbers"
 	"strings"
 
 	"github.com/spf13/viper"
-	"github.com/trustwallet/blockatlas/coin"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 )
 
 type Platform struct {

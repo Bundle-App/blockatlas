@@ -9,8 +9,8 @@ import (
 	"github.com/spf13/viper"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
-	"github.com/trustwallet/blockatlas/api"
-	"github.com/trustwallet/blockatlas/pkg/ginutils"
+	"github.com/Bundle-App/blockatlas/api"
+	"github.com/Bundle-App/blockatlas/pkg/ginutils"
 	"net/http"
 	"os"
 	"os/signal"
@@ -19,10 +19,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/trustwallet/blockatlas/config"
-	"github.com/trustwallet/blockatlas/pkg/logger"
-	"github.com/trustwallet/blockatlas/platform"
-	"github.com/trustwallet/blockatlas/storage"
+	"github.com/Bundle-App/blockatlas/config"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/platform"
+	"github.com/Bundle-App/blockatlas/storage"
 )
 
 func TestApis(t *testing.T) {

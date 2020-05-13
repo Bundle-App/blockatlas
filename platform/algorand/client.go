@@ -2,8 +2,8 @@ package algorand
 
 import (
 	"fmt"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/numbers"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/numbers"
 )
 
 type Client struct {

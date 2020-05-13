@@ -4,7 +4,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"github.com/mr-tron/base58"
-	"github.com/trustwallet/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
 )
 
 // HexToAddress converts a hex representation of a Tron address

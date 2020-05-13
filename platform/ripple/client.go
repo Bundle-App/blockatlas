@@ -2,7 +2,7 @@ package ripple
 
 import (
 	"fmt"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"net/url"
 )
 

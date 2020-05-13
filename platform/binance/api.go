@@ -1,13 +1,13 @@
 package binance
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/numbers"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/numbers"
 	"strings"
 
 	"github.com/spf13/viper"
-	"github.com/trustwallet/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/coin"
 )
 
 type Platform struct {

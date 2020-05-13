@@ -1,8 +1,8 @@
 package fixer
 
 import (
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate"
 	"net/url"
 )
 

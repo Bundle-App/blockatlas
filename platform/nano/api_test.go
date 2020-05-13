@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 )
 
 func TestNormalize(t *testing.T) {

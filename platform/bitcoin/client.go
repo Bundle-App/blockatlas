@@ -2,7 +2,7 @@ package bitcoin
 
 import (
 	"fmt"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"net/url"
 	"strconv"
 )

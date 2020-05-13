@@ -3,10 +3,10 @@ package api
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/ginutils"
-	"github.com/trustwallet/blockatlas/platform"
-	"github.com/trustwallet/blockatlas/storage"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/ginutils"
+	"github.com/Bundle-App/blockatlas/platform"
+	"github.com/Bundle-App/blockatlas/storage"
 	"strconv"
 )
 
