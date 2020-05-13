@@ -93,8 +93,8 @@ func extractBase(srcTx *Doc, coinIndex uint) (base blockatlas.Tx, ok bool) {
 	base = blockatlas.Tx{
 		ID:       srcTx.ID,
 		Coin:     coinIndex,
-		From:     srcTx.From,
-		To:       srcTx.To,
+		From:     address.EIP55Checksum(srcTx.From),
+		To:       address.EIP55Checksum(srcTx.To),
 		Fee:      blockatlas.Amount(fee),
 		Date:     srcTx.Timestamp,
 		Block:    srcTx.BlockNumber,
