@@ -2,11 +2,12 @@ package observer
 
 import (
 	"context"
-	"github.com/spf13/viper"
+	"github.com/Bundle-App/blockatlas/coin"
 	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"github.com/Bundle-App/blockatlas/pkg/logger"
 	"github.com/Bundle-App/blockatlas/pkg/semaphore"
 	"github.com/Bundle-App/blockatlas/storage"
+	"github.com/spf13/viper"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -100,7 +101,20 @@ func (s *Stream) loadBlock(c chan<- *blockatlas.Block, num int64) {
 	// Not strictly correct nor avoids race conditions
 	// But good enough
 	newNum := atomic.AddInt64(&s.blockNumber, 1)
-	err = s.Tracker.SetBlockNumber(s.coin, newNum)
+	if s.coin == coin.BTC {
+		if len(block.Txs) > 0 {
+			s.updateBlockHeight(newNum, num)
+		} else {
+			logger.Error("no of transaction in the BTC block is 0, so skipping and retrying again", s.logParams,
+				logger.Params{"block": num, "coin": s.coin})
+		}
+	} else {
+		s.updateBlockHeight(newNum, num)
+	}
+}
+
+func (s *Stream) updateBlockHeight(newNum int64, num int64) {
+	err := s.Tracker.SetBlockNumber(s.coin, newNum)
 	if err != nil {
 		logger.Error(err, "SetBlockNumber failed", s.logParams, logger.Params{"block": num, "coin": s.coin})
 	}
