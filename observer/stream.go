@@ -2,6 +2,7 @@ package observer
 
 import (
 	"context"
+	"github.com/Bundle-App/blockatlas/coin"
 	"github.com/spf13/viper"
 	"github.com/trustwallet/blockatlas/pkg/blockatlas"
 	"github.com/trustwallet/blockatlas/pkg/logger"
@@ -100,6 +101,12 @@ func (s *Stream) loadBlock(c chan<- *blockatlas.Block, num int64) {
 	// Not strictly correct nor avoids race conditions
 	// But good enough
 	newNum := atomic.AddInt64(&s.blockNumber, 1)
+
+	if s.coin == coin.BTC && len(block.Txs) < 1 {
+		logger.Error(err, "Got an empty BTC block - Not persisting block height number", s.logParams, logger.Params{"block": num, "coin": s.coin})
+		return
+	}
+
 	err = s.Tracker.SetBlockNumber(s.coin, newNum)
 	if err != nil {
 		logger.Error(err, "SetBlockNumber failed", s.logParams, logger.Params{"block": num, "coin": s.coin})
