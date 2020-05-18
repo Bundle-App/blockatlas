@@ -101,20 +101,10 @@ func (s *Stream) loadBlock(c chan<- *blockatlas.Block, num int64) {
 	// Not strictly correct nor avoids race conditions
 	// But good enough
 	newNum := atomic.AddInt64(&s.blockNumber, 1)
-	if s.coin == coin.BTC {
-		if len(block.Txs) > 0 {
-			s.updateBlockHeight(newNum, num)
-		} else {
-			logger.Error("no of transaction in the BTC block is 0, so skipping and retrying again", s.logParams,
-				logger.Params{"block": num, "coin": s.coin})
-		}
-	} else {
-		s.updateBlockHeight(newNum, num)
-	}
-}
-
-func (s *Stream) updateBlockHeight(newNum int64, num int64) {
-	err := s.Tracker.SetBlockNumber(s.coin, newNum)
+		if s.coin == coin.BTC && len(block.Txs) < 1 {
+		logger.Error("Got an empty BTC block - Not persisting block height number", s.logParams, logger.Params{"block": num, "coin": s.coin})
+		return
+	  }
 	if err != nil {
 		logger.Error(err, "SetBlockNumber failed", s.logParams, logger.Params{"block": num, "coin": s.coin})
 	}
