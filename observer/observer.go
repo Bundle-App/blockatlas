@@ -64,13 +64,14 @@ func (o *Observer) processBlock(events chan<- Event, block *blockatlas.Block) {
 		logger.Info(fmt.Sprintf("\nBLOCK_ATLAS_LOGS : SUB_AND_TXs: %v | RelatedTxs: %v", sub, tx.Txs()))
 
 		for _, tx := range tx.Txs() {
-			tx.Direction = getDirection(tx, sub.Address)
-			inferUtxoValue(&tx, sub.Address, o.Coin)
+			localTx := tx
+			localTx.Direction = getDirection(localTx, sub.Address)
+			inferUtxoValue(&localTx, sub.Address, o.Coin)
 
-			logger.Info(fmt.Sprintf("\nBLOCK_ATLAS_LOGS: TX_EVENT Sub-Address: %s => Tx: %s\n", sub.Address, tx.ToJson()))
+			logger.Info(fmt.Sprintf("\nBLOCK_ATLAS_LOGS: TX_EVENT Sub-Address: %s => Tx: %s", sub.Address, localTx.ToJson()))
 			events <- Event{
 				Subscription: sub,
-				Tx:           &tx,
+				Tx:           &localTx,
 			}
 		}
 	}
