@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"encoding/json"
 	"github.com/stretchr/testify/assert"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"math/big"
 	"testing"
 
-	"github.com/trustwallet/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/coin"
 )
 
 const tokenTransferSrc = `

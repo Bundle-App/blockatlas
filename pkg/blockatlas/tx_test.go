@@ -2,7 +2,7 @@ package blockatlas
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/trustwallet/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/coin"
 	"testing"
 )
 

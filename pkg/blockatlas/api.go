@@ -2,7 +2,7 @@ package blockatlas
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/trustwallet/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/coin"
 )
 
 // Initer is a service that can be initialized once

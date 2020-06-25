@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/trustwallet/blockatlas/pkg/ginutils"
+	"github.com/Bundle-App/blockatlas/pkg/ginutils"
 )
 
 func GetRoot(c *gin.Context) {

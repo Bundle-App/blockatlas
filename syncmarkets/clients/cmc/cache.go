@@ -2,9 +2,9 @@ package cmc
 
 import (
 	"fmt"
-	"github.com/trustwallet/blockatlas/coin"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
 )
 
 type CoinMap struct {

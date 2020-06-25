@@ -1,11 +1,12 @@
 package observer
 
 import (
+	"fmt"
 	mapset "github.com/deckarep/golang-set"
-	"github.com/trustwallet/blockatlas/coin"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/platform/bitcoin"
-	"github.com/trustwallet/blockatlas/storage"
+	"github.com/Bundle-App/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/platform/bitcoin"
+	"github.com/Bundle-App/blockatlas/storage"
 )
 
 type Event struct {
@@ -58,6 +59,7 @@ func (o *Observer) processBlock(events chan<- Event, block *blockatlas.Block) {
 		for _, tx := range tx.Txs() {
 			tx.Direction = getDirection(tx, sub.Address)
 			inferUtxoValue(&tx, sub.Address, o.Coin)
+			fmt.Printf("\nATLAS_EVENT_SENT: Addr: %s => Tx: %v\n", sub.Address, tx)
 			events <- Event{
 				Subscription: sub,
 				Tx:           &tx,

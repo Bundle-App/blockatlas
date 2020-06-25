@@ -3,8 +3,8 @@ package redis
 import (
 	"encoding/json"
 	"github.com/go-redis/redis"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/storage/util"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/storage/util"
 )
 
 type Redis struct {

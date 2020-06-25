@@ -2,7 +2,7 @@ package blockatlas
 
 import (
 	"encoding/json"
-	"github.com/trustwallet/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
 )
 
 const (

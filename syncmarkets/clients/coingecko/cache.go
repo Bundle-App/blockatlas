@@ -2,9 +2,9 @@ package coingecko
 
 import (
 	"fmt"
-	"github.com/trustwallet/blockatlas/pkg/address"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/address"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
 	"strings"
 )
 

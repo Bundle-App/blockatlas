@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
 	"sort"
 	"testing"
 )

@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"github.com/cenkalti/backoff"
 	"github.com/robfig/cron/v3"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/logger"
-	"github.com/trustwallet/blockatlas/storage"
-	"github.com/trustwallet/blockatlas/syncmarkets/market"
-	"github.com/trustwallet/blockatlas/syncmarkets/rate"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/storage"
+	"github.com/Bundle-App/blockatlas/syncmarkets/market"
+	"github.com/Bundle-App/blockatlas/syncmarkets/rate"
 	"time"
 )
 

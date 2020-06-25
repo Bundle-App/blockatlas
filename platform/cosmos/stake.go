@@ -1,11 +1,11 @@
 package cosmos
 
 import (
-	"github.com/trustwallet/blockatlas/coin"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/errors"
-	"github.com/trustwallet/blockatlas/pkg/logger"
-	services "github.com/trustwallet/blockatlas/services/assets"
+	"github.com/Bundle-App/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/errors"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+	services "github.com/Bundle-App/blockatlas/services/assets"
 	"strconv"
 	"time"
 )

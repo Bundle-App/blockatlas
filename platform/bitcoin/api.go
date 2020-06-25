@@ -5,10 +5,10 @@ import (
 	mapset "github.com/deckarep/golang-set"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"github.com/trustwallet/blockatlas/coin"
-	"github.com/trustwallet/blockatlas/pkg/blockatlas"
-	"github.com/trustwallet/blockatlas/pkg/logger"
-	"github.com/trustwallet/blockatlas/pkg/numbers"
+	"github.com/Bundle-App/blockatlas/coin"
+	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+	"github.com/Bundle-App/blockatlas/pkg/numbers"
 	"net/http"
 	"sync"
 )
@@ -153,7 +153,7 @@ func (p *Platform) GetBlockByNumber(num int64) (*blockatlas.Block, error) {
 	txs := append(txPages, block.TransactionList()...)
 	var normalized []blockatlas.Tx
 	for _, tx := range txs {
-		normalized = append(normalized, normalizeTransaction(tx, p.CoinIndex))
+		normalized = append(normalized, NormalizeTransaction(tx, p.CoinIndex))
 	}
 	return &blockatlas.Block{
 		Number: num,
@@ -172,7 +172,7 @@ func normalizeTxs(sourceTxs TransactionsList, coinIndex uint, addressSet mapset.
 	return txs
 }
 
-func normalizeTransaction(tx Transaction, coinIndex uint) blockatlas.Tx {
+func NormalizeTransaction(tx Transaction, coinIndex uint) blockatlas.Tx {
 	inputs := parseOutputs(tx.Vin)
 	outputs := parseOutputs(tx.Vout)
 	from := ""
@@ -209,7 +209,7 @@ func normalizeTransaction(tx Transaction, coinIndex uint) blockatlas.Tx {
 }
 
 func normalizeTransfer(transaction Transaction, coinIndex uint, addressSet mapset.Set) (tx blockatlas.Tx, ok bool) {
-	tx = normalizeTransaction(transaction, coinIndex)
+	tx = NormalizeTransaction(transaction, coinIndex)
 	direction := InferDirection(&tx, addressSet)
 	value := InferValue(&tx, direction, addressSet)
 
