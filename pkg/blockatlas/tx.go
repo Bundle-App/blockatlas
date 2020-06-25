@@ -242,6 +242,7 @@ func (t *Tx) ToJson() string {
 	txBytes, err := json.Marshal(t)
 	if err != nil {
 		logger.Error("Failed parsing tx object")
+		return "";
 	}
 	return string(txBytes)
 }
