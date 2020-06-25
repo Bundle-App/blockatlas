@@ -1,6 +1,9 @@
 package observer
 
 import (
+	"encoding/json"
+	"fmt"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
 	mapset "github.com/deckarep/golang-set"
 	"github.com/Bundle-App/blockatlas/coin"
 	"github.com/Bundle-App/blockatlas/pkg/blockatlas"
@@ -50,14 +53,26 @@ func (o *Observer) processBlock(events chan<- Event, block *blockatlas.Block) {
 	if err != nil || len(subs) == 0 {
 		return
 	}
+
+	logInfo := fmt.Sprintf("\nBLOCK_ATLAS_LOGS : BLOCK_DATA Block Hash: %s - Block TxSize: %d | Related Subs: %v", block.ID, len(block.Txs), subs)
+	logger.Info(logInfo)
+
 	for _, sub := range subs {
 		tx, ok := txMap[sub.Address]
 		if !ok {
 			continue
 		}
+
+		logInfo := fmt.Sprintf("\nBLOCK_ATLAS_LOGS : SUB_AND_TXs: %v | RelatedTxs: %v", sub, tx.Txs())
+		logger.Info(logInfo)
+
 		for _, tx := range tx.Txs() {
 			tx.Direction = getDirection(tx, sub.Address)
 			inferUtxoValue(&tx, sub.Address, o.Coin)
+
+			logInfo := fmt.Sprintf("\nBLOCK_ATLAS_LOGS: TX_EVENT Sub-Address: %s => Tx: %s\n", sub.Address, tx.ToJson())
+			logger.Info(logInfo)
+
 			events <- Event{
 				Subscription: sub,
 				Tx:           &tx,
