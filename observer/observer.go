@@ -1,7 +1,6 @@
 package observer
 
 import (
-	"encoding/json"
 	"fmt"
 	"github.com/Bundle-App/blockatlas/pkg/logger"
 	mapset "github.com/deckarep/golang-set"
