@@ -1,5 +1,10 @@
 package blockatlas
 
+import (
+	"encoding/json"
+	"github.com/Bundle-App/blockatlas/pkg/logger"
+)
+
 type Direction string
 type Status string
 type TokenType string
@@ -231,4 +236,12 @@ func (t *Tx) GetAddresses() []string {
 	default:
 		return addresses
 	}
+}
+
+func (t *Tx) ToJson() string {
+	txBytes, err := json.Marshal(t)
+	if err != nil {
+		logger.Error("Failed parsing tx object")
+	}
+	return string(txBytes)
 }
