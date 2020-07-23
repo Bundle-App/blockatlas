@@ -191,6 +191,7 @@ func (p *Platform) GetBlockByNumber(num int64) (*blockatlas.Block, error) {
 			Txs:    txs,
 		}, nil
 	} else {
+		logger.Error(fmt.Sprintf("ATLAS_LOGS_ERROR : (ETH)GetTransactionsByBlock FAILED | BlockNumber: %d | - Error: %v | ",num, err))
 		return nil, err
 	}
 }

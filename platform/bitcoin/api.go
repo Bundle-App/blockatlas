@@ -127,6 +127,8 @@ func (p *Platform) GetAllBlockPages(total, num int64) []Transaction {
 			block, err := p.client.GetTransactionsByBlock(num, page)
 			if err != nil {
 				logger.Error("GetTransactionsByBlockChan", err, logger.Params{"number": num, "page": page})
+				logger.Error(fmt.Sprintf("ATLAS_LOGS_ERROR : (BTC)GetTransactionsByBlock FAILED | BlockNumber: %d | - Total: %d | Page: %d  | Error: %v | ",num, total, page, err))
+
 				return
 			}
 			out <- block
